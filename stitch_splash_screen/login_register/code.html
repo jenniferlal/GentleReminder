@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gentle Reminder - Secure Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-primary": "#6aa8f9",
+              "tertiary-container": "#fedba3",
+              "secondary": "#006c5c",
+              "error-container": "#fa746f",
+              "on-secondary-container": "#005d4f",
+              "surface-tint": "#0960ac",
+              "surface-container-lowest": "#ffffff",
+              "inverse-surface": "#0b0f0f",
+              "tertiary-fixed-dim": "#efcd96",
+              "on-error-container": "#6e0a12",
+              "surface-container-high": "#e2eae9",
+              "secondary-dim": "#005e50",
+              "on-secondary-fixed-variant": "#006858",
+              "on-tertiary-container": "#644c21",
+              "surface-container-highest": "#dbe4e3",
+              "on-primary-container": "#00284e",
+              "on-primary-fixed": "#000613",
+              "on-secondary-fixed": "#00483d",
+              "on-secondary": "#e3fff6",
+              "primary-dim": "#005499",
+              "primary-container": "#6aa8f9",
+              "error": "#a83836",
+              "surface-container": "#e9efee",
+              "outline": "#737c7c",
+              "primary-fixed": "#6aa8f9",
+              "tertiary": "#745b2f",
+              "secondary-container": "#7cf8dd",
+              "on-primary-fixed-variant": "#00315e",
+              "on-background": "#2c3434",
+              "on-surface": "#2c3434",
+              "tertiary-dim": "#674f24",
+              "primary-fixed-dim": "#5c9beb",
+              "error-dim": "#67040d",
+              "surface-variant": "#dbe4e3",
+              "surface-dim": "#d3dcdb",
+              "surface": "#f7faf9",
+              "inverse-on-surface": "#9a9e9d",
+              "surface-container-low": "#f0f5f4",
+              "outline-variant": "#abb4b3",
+              "on-error": "#fff7f6",
+              "secondary-fixed": "#7cf8dd",
+              "on-primary": "#f8f8ff",
+              "on-tertiary": "#fff8f2",
+              "secondary-fixed-dim": "#6ce9cf",
+              "on-tertiary-fixed": "#503a11",
+              "primary": "#0960ac",
+              "surface-bright": "#f7faf9",
+              "on-surface-variant": "#586160",
+              "tertiary-fixed": "#fedba3",
+              "background": "#f7faf9",
+              "on-tertiary-fixed-variant": "#6f562a"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-shadow {
+            box-shadow: 0 12px 32px rgba(44, 52, 52, 0.06);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<!-- Header / Brand Shell -->
+<header class="fixed top-0 w-full z-50 bg-[#f7faf9]/80 backdrop-blur-xl flex items-center justify-between px-6 h-16">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="bubble_chart">bubble_chart</span>
+<span class="text-xl font-headline font-bold bg-gradient-to-br from-[#0960ac] to-[#6aa8f9] bg-clip-text text-transparent">Gentle Reminder</span>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center px-4 pt-20 pb-12">
+<div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 bg-surface-container-lowest rounded-xl overflow-hidden soft-shadow">
+<!-- Left Side: Aesthetic/Branding -->
+<div class="hidden md:flex flex-col justify-between p-12 bg-surface-container relative overflow-hidden">
+<div class="absolute inset-0 opacity-10" data-alt="Abstract calming blue and teal organic patterns">
+<svg class="w-full h-full" viewbox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<path d="M47.7,-63.2C61.1,-55.8,70.6,-40.7,75.9,-24.5C81.2,-8.3,82.2,9,76.5,24.5C70.8,40.1,58.3,53.8,43.5,63.1C28.7,72.4,11.5,77.3,-5.7,85.2C-22.9,93,-40.1,103.8,-54.2,100.8C-68.4,97.7,-79.6,80.8,-86.3,63.6C-92.9,46.4,-95,28.8,-95.2,11.5C-95.4,-5.8,-93.7,-22.8,-86.1,-37.6C-78.4,-52.4,-64.8,-65.1,-49.5,-71.6C-34.1,-78.1,-17.1,-78.4,0.3,-78.9C17.7,-79.3,34.3,-70.6,47.7,-63.2Z" fill="#0960ac" transform="translate(200 200)"></path>
+</svg>
+</div>
+<div class="relative z-10">
+<h1 class="font-headline text-4xl font-extrabold text-on-background tracking-tight leading-tight mb-4">
+                        Your wellness, <br/>
+<span class="text-primary">thoughtfully</span> paced.
+                    </h1>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-xs">
+                        Join a community dedicated to mindful health management and serenity.
+                    </p>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-4 p-4 bg-surface/50 backdrop-blur-md rounded-lg border border-white/20">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div>
+<p class="text-sm font-semibold">Proactive Care</p>
+<p class="text-xs text-on-surface-variant">Never miss a beat with smart alerts.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Auth Form -->
+<div class="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+<div class="mb-8">
+<h2 class="font-headline text-3xl font-bold tracking-tight text-on-background mb-2">Welcome Back</h2>
+<p class="text-on-surface-variant font-medium">Please enter your details to continue.</p>
+</div>
+<form class="space-y-6">
+<div class="space-y-1.5">
+<label class="block text-xs font-label font-bold tracking-[0.05em] uppercase text-on-surface-variant ml-1" for="email">Email Address</label>
+<div class="relative group">
+<input class="w-full px-5 py-4 bg-surface-container-high border-none rounded-lg focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all duration-300 outline-none text-on-surface placeholder:text-outline-variant" id="email" name="email" placeholder="name@example.com" type="email"/>
+<div class="absolute inset-y-0 right-4 flex items-center pointer-events-none opacity-40 group-focus-within:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-sm" data-icon="mail">mail</span>
+</div>
+</div>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between items-center ml-1">
+<label class="block text-xs font-label font-bold tracking-[0.05em] uppercase text-on-surface-variant" for="password">Password</label>
+<a class="text-xs font-bold text-primary hover:text-primary-dim transition-colors" href="#">Forgot?</a>
+</div>
+<div class="relative group">
+<input class="w-full px-5 py-4 bg-surface-container-high border-none rounded-lg focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all duration-300 outline-none text-on-surface placeholder:text-outline-variant" id="password" name="password" placeholder="••••••••" type="password"/>
+<div class="absolute inset-y-0 right-4 flex items-center cursor-pointer opacity-40 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-sm" data-icon="visibility_off">visibility_off</span>
+</div>
+</div>
+</div>
+<button class="w-full py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold rounded-xl shadow-lg hover:shadow-xl active:scale-[0.98] transition-all duration-200" type="submit">
+                        Sign In
+                    </button>
+</form>
+<div class="mt-8 relative">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-surface-container-highest"></div>
+</div>
+<div class="relative flex justify-center text-xs uppercase tracking-widest font-bold">
+<span class="bg-surface-container-lowest px-4 text-outline-variant">Or continue with</span>
+</div>
+</div>
+<div class="mt-6 grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-3 py-3 px-4 rounded-xl border border-surface-container-highest hover:bg-surface-container-low transition-colors active:scale-95 duration-200">
+<img alt="Google" class="w-5 h-5" data-alt="Google logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM5xPaHFa8AbGpeJWu5y-Eto-JZoaz65O6AhzI64rYDQEYcD7CGTtYsynYrNFyJ58eErYh3s4Yu2Ll4GquEDoe7c1SUaIaLwK8183uW71EdLlTbY7YHVjfO5LEUg8Ls4JoSN_8tV4l7Uvqtyc25Kd8JxV0-aN7jZAstNxThKXwVt_pFaI-G9Cd_bpVy3-Y0Bz5q8advGfeaN6bNU1nLhFnCNGUYkizK4l7HXN_WyDB8cKiBIcKqQ451HWtAHMpoe5WTRzGpfxWqBmv"/>
+<span class="text-sm font-bold text-on-surface">Google</span>
+</button>
+<button class="flex items-center justify-center gap-3 py-3 px-4 rounded-xl border border-surface-container-highest hover:bg-surface-container-low transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-on-surface" data-icon="apple" style="font-variation-settings: 'FILL' 1;">ios</span>
+<span class="text-sm font-bold text-on-surface">Apple</span>
+</button>
+</div>
+<p class="mt-10 text-center text-sm text-on-surface-variant">
+                    Don't have an account? 
+                    <a class="text-primary font-bold hover:underline underline-offset-4" href="#">Create Account</a>
+</p>
+</div>
+</div>
+</main>
+<!-- Footer Meta -->
+<footer class="mt-auto py-8 text-center text-xs text-outline-variant">
+<div class="flex justify-center gap-6 mb-4">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Help Center</a>
+</div>
+<p>© 2024 Gentle Reminder. Built for your peace of mind.</p>
+</footer>
+<!-- Register Modal Backdrop (Hidden by default, for representation) -->
+<div class="fixed inset-0 bg-on-background/10 backdrop-blur-sm z-[60] flex items-center justify-center p-4 hidden">
+<!-- This would contain the Register variant of the form above -->
+<div class="bg-white w-full max-w-md p-10 rounded-xl soft-shadow">
+<div class="flex justify-between items-center mb-6">
+<h2 class="font-headline text-2xl font-bold">Create Account</h2>
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<!-- Register form content would go here -->
+</div>
+</div>
+</body></html>

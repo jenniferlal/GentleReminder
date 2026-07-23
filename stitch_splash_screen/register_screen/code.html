@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Register - Gentle Reminder</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#006858",
+              "on-primary-fixed-variant": "#00315e",
+              "on-secondary-container": "#005d4f",
+              "on-surface": "#2c3434",
+              "inverse-surface": "#0b0f0f",
+              "primary-fixed": "#6aa8f9",
+              "surface-container-high": "#e2eae9",
+              "on-primary": "#f8f8ff",
+              "tertiary-fixed-dim": "#efcd96",
+              "surface-container": "#e9efee",
+              "primary-fixed-dim": "#5c9beb",
+              "tertiary-fixed": "#fedba3",
+              "on-error-container": "#6e0a12",
+              "outline-variant": "#abb4b3",
+              "tertiary-container": "#fedba3",
+              "tertiary": "#745b2f",
+              "primary-container": "#6aa8f9",
+              "primary-dim": "#005499",
+              "tertiary-dim": "#674f24",
+              "secondary-container": "#7cf8dd",
+              "on-tertiary-fixed-variant": "#6f562a",
+              "on-secondary": "#e3fff6",
+              "on-tertiary-container": "#644c21",
+              "on-secondary-fixed": "#00483d",
+              "surface-dim": "#d3dcdb",
+              "primary": "#0960ac",
+              "surface-container-highest": "#dbe4e3",
+              "background": "#f7faf9",
+              "outline": "#737c7c",
+              "surface-bright": "#f7faf9",
+              "surface": "#f7faf9",
+              "error-dim": "#67040d",
+              "surface-tint": "#0960ac",
+              "on-error": "#fff7f6",
+              "error-container": "#fa746f",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#fff8f2",
+              "secondary-fixed-dim": "#6ce9cf",
+              "surface-variant": "#dbe4e3",
+              "on-primary-fixed": "#000613",
+              "secondary-dim": "#005e50",
+              "on-tertiary-fixed": "#503a11",
+              "on-surface-variant": "#586160",
+              "on-primary-container": "#00284e",
+              "secondary-fixed": "#7cf8dd",
+              "surface-container-low": "#f0f5f4",
+              "inverse-on-surface": "#9a9e9d",
+              "error": "#a83836",
+              "secondary": "#006c5c",
+              "inverse-primary": "#6aa8f9",
+              "on-background": "#2c3434"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        background: rgba(247, 250, 249, 0.8);
+        backdrop-filter: blur(20px);
+      }
+      .primary-gradient {
+        background: linear-gradient(135deg, #0960ac 0%, #6aa8f9 100%);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body min-h-screen flex flex-col">
+<!-- Top Navigation (Shell suppressed for Transactional screen per Mandate) -->
+<header class="fixed top-0 w-full z-50 glass-effect">
+<div class="flex items-center justify-between px-6 py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container rounded-full transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="font-headline font-bold tracking-tight text-xl text-on-surface">Gentle Reminder</h1>
+</div>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center px-6 pt-24 pb-12">
+<div class="w-full max-w-2xl grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<!-- Left Side: Editorial Welcome -->
+<div class="md:col-span-5 flex flex-col gap-6">
+<div class="space-y-2">
+<h2 class="font-headline font-extrabold text-4xl lg:text-5xl text-on-surface leading-tight tracking-tight">
+                        Begin your <span class="text-primary">serene</span> journey.
+                    </h2>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-sm">
+                        Create your sanctuary to manage wellness with peace of mind and gentle guidance.
+                    </p>
+</div>
+<!-- Visual Anchor (Bento-style snippet) -->
+<div class="hidden md:block p-6 bg-surface-container rounded-lg border-l-4 border-primary">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<p class="font-headline font-bold text-on-surface">Your Privacy Matters</p>
+</div>
+<p class="text-sm text-on-surface-variant">We encrypt your health data with medical-grade security to ensure your peace of mind.</p>
+</div>
+</div>
+<!-- Right Side: Registration Form -->
+<div class="md:col-span-7 bg-surface-container-lowest rounded-xl p-8 md:p-10 shadow-[0_12px_32px_rgba(44,52,52,0.06)]">
+<form class="space-y-6">
+<!-- Name Field -->
+<div class="space-y-1">
+<label class="block font-label font-semibold text-sm tracking-wide text-on-surface ml-1" for="name">Full Name</label>
+<input class="w-full bg-surface-container-high border-none rounded-sm px-5 py-4 text-on-surface placeholder:text-outline-variant focus:ring-2 focus:ring-primary-container transition-all" id="name" placeholder="Elizabeth Harmon" type="text"/>
+</div>
+<!-- Email Field -->
+<div class="space-y-1">
+<label class="block font-label font-semibold text-sm tracking-wide text-on-surface ml-1" for="email">Email Address</label>
+<input class="w-full bg-surface-container-high border-none rounded-sm px-5 py-4 text-on-surface placeholder:text-outline-variant focus:ring-2 focus:ring-primary-container transition-all" id="email" placeholder="elizabeth@sanctuary.com" type="email"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Age Field -->
+<div class="space-y-1">
+<label class="block font-label font-semibold text-sm tracking-wide text-on-surface ml-1" for="age">Age</label>
+<input class="w-full bg-surface-container-high border-none rounded-sm px-5 py-4 text-on-surface placeholder:text-outline-variant focus:ring-2 focus:ring-primary-container transition-all" id="age" placeholder="72" type="number"/>
+</div>
+<!-- Contact Field -->
+<div class="space-y-1">
+<label class="block font-label font-semibold text-sm tracking-wide text-on-surface ml-1" for="contact">Contact Number</label>
+<input class="w-full bg-surface-container-high border-none rounded-sm px-5 py-4 text-on-surface placeholder:text-outline-variant focus:ring-2 focus:ring-primary-container transition-all" id="contact" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-1">
+<label class="block font-label font-semibold text-sm tracking-wide text-on-surface ml-1" for="password">Secure Password</label>
+<div class="relative">
+<input class="w-full bg-surface-container-high border-none rounded-sm px-5 py-4 text-on-surface placeholder:text-outline-variant focus:ring-2 focus:ring-primary-container transition-all" id="password" placeholder="••••••••••••" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-outline" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<!-- CTA Actions -->
+<div class="pt-4 flex flex-col gap-4">
+<button class="primary-gradient text-on-primary font-headline font-bold text-lg py-5 px-8 rounded-xl active:scale-95 transition-transform shadow-lg shadow-primary/20" type="submit">
+                            Create Account
+                        </button>
+<div class="flex items-center gap-4 py-2">
+<div class="h-[1px] flex-grow bg-surface-container-high"></div>
+<span class="text-xs font-bold text-outline uppercase tracking-widest">or</span>
+<div class="h-[1px] flex-grow bg-surface-container-high"></div>
+</div>
+<button class="bg-secondary-container text-on-secondary-container font-headline font-bold text-lg py-5 px-8 rounded-xl active:scale-95 transition-transform" type="button">
+                            Back to Sign In
+                        </button>
+</div>
+<!-- Agreement Text -->
+<p class="text-center text-xs text-on-surface-variant px-4 leading-relaxed">
+                        By creating an account, you agree to our <a class="text-primary font-semibold underline underline-offset-4" href="#">Terms of Service</a> and <a class="text-primary font-semibold underline underline-offset-4" href="#">Privacy Policy</a>.
+                    </p>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer Quote (Editorial element) -->
+<footer class="mt-auto py-8 px-6 text-center">
+<p class="text-outline-variant font-headline italic text-sm">
+            "The greatest wealth is health." — Virgil
+        </p>
+</footer>
+<!-- Bottom Navigation Shell suppressed per Task Focus/Transactional rules -->
+</body></html>

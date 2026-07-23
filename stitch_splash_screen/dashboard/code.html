@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gentle Reminder - Dashboard</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Manrope:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#006858",
+              "on-primary-fixed-variant": "#00315e",
+              "on-secondary-container": "#005d4f",
+              "on-surface": "#2c3434",
+              "inverse-surface": "#0b0f0f",
+              "primary-fixed": "#6aa8f9",
+              "surface-container-high": "#e2eae9",
+              "on-primary": "#f8f8ff",
+              "tertiary-fixed-dim": "#efcd96",
+              "surface-container": "#e9efee",
+              "primary-fixed-dim": "#5c9beb",
+              "tertiary-fixed": "#fedba3",
+              "on-error-container": "#6e0a12",
+              "outline-variant": "#abb4b3",
+              "tertiary-container": "#fedba3",
+              "tertiary": "#745b2f",
+              "primary-container": "#6aa8f9",
+              "primary-dim": "#005499",
+              "tertiary-dim": "#674f24",
+              "secondary-container": "#7cf8dd",
+              "on-tertiary-fixed-variant": "#6f562a",
+              "on-secondary": "#e3fff6",
+              "on-tertiary-container": "#644c21",
+              "on-secondary-fixed": "#00483d",
+              "surface-dim": "#d3dcdb",
+              "primary": "#0960ac",
+              "surface-container-highest": "#dbe4e3",
+              "background": "#f7faf9",
+              "outline": "#737c7c",
+              "surface-bright": "#f7faf9",
+              "surface": "#f7faf9",
+              "error-dim": "#67040d",
+              "surface-tint": "#0960ac",
+              "on-error": "#fff7f6",
+              "error-container": "#fa746f",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#fff8f2",
+              "secondary-fixed-dim": "#6ce9cf",
+              "surface-variant": "#dbe4e3",
+              "on-primary-fixed": "#000613",
+              "secondary-dim": "#005e50",
+              "on-tertiary-fixed": "#503a11",
+              "on-surface-variant": "#586160",
+              "on-primary-container": "#00284e",
+              "secondary-fixed": "#7cf8dd",
+              "surface-container-low": "#f0f5f4",
+              "inverse-on-surface": "#9a9e9d",
+              "error": "#a83836",
+              "secondary": "#006c5c",
+              "inverse-primary": "#6aa8f9",
+              "on-background": "#2c3434"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .breathe-ring {
+            background: conic-gradient(from 0deg, #7cf8dd, #006c5c, #7cf8dd);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f7faf9]/80 dark:bg-[#2c3434]/80 backdrop-blur-md shadow-sm dark:shadow-none flex items-center justify-between px-6 py-4">
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-[#e9efee] dark:hover:bg-[#2c3434] transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#0960ac] dark:text-[#6aa8f9]" data-icon="menu">menu</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-[#2c3434] dark:text-[#f7faf9] text-xl">Gentle Reminder</h1>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container shadow-sm">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="Senior woman smiling profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWZyNwEqC_hVk0qy8V-Sa686QBteQMjh-RcZBYxIWQ3_Hk_qrF1ZBfywKQlE2amQxRKMHX_h3hCkbkLwM-eSN_8YbrG0UvoFD6QCVg3iFCGiLdul2B9KepFGeUSXo0COGYxLUIlon_XHDbxjZI1hTS7pGXcR7zB1S8o-BSrBGnCIUwbZQTQE36xqZs5OibTA7XT_R94DV_r4SDrlYEmOE-uXSSGRvCvRzC-lmxEdALdG9fTcKj-xSL2mYZrIB008Ae38oERbu9i516"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto space-y-10">
+<!-- Welcome Section -->
+<section class="space-y-2">
+<h2 class="font-headline text-3xl font-extrabold tracking-tight text-on-surface">Good Morning, Elizabeth</h2>
+<p class="text-on-surface-variant text-lg">Your sanctuary is ready. Here is your day at a glance.</p>
+</section>
+<!-- Signature "Breathe" Progress Ring - Editorial Bento Item -->
+<section class="relative bg-surface-container-lowest rounded-xl p-8 flex flex-col items-center justify-center gap-6 shadow-[0_12px_32px_rgba(44,52,52,0.06)]">
+<div class="relative w-48 h-48 flex items-center justify-center">
+<!-- Outer Track -->
+<div class="absolute inset-0 rounded-full border-[12px] border-surface-container"></div>
+<!-- Progress Ring -->
+<div class="absolute inset-0 rounded-full border-[12px] border-transparent border-t-secondary border-r-secondary-fixed breathe-ring rotate-45 opacity-90"></div>
+<!-- Content -->
+<div class="text-center z-10">
+<span class="block font-headline text-4xl font-bold text-primary">85%</span>
+<span class="text-sm font-semibold text-on-surface-variant tracking-wider">DAILY ADHERENCE</span>
+</div>
+</div>
+<div class="text-center">
+<p class="font-semibold text-on-surface">Great job! You've completed 5 of 6 tasks.</p>
+<p class="text-sm text-secondary font-bold">Next: Medication at 10:00 AM</p>
+</div>
+</section>
+<!-- Category Bento Grid -->
+<section class="grid grid-cols-2 gap-4">
+<!-- Medicine Reminder -->
+<button class="bg-surface-container-low hover:bg-surface-container-high transition-colors p-6 rounded-xl flex flex-col items-start gap-4 text-left active:scale-95 duration-200">
+<div class="w-12 h-12 bg-primary-container/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl filled-icon" data-icon="medical_services">medical_services</span>
+</div>
+<div>
+<span class="block font-headline font-bold text-lg text-on-surface leading-tight">Medicine Reminder</span>
+<span class="text-sm text-on-surface-variant">3 remaining</span>
+</div>
+</button>
+<!-- Walk Reminder -->
+<button class="bg-surface-container-low hover:bg-surface-container-high transition-colors p-6 rounded-xl flex flex-col items-start gap-4 text-left active:scale-95 duration-200">
+<div class="w-12 h-12 bg-secondary-container/30 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl filled-icon" data-icon="directions_walk">directions_walk</span>
+</div>
+<div>
+<span class="block font-headline font-bold text-lg text-on-surface leading-tight">Walk Reminder</span>
+<span class="text-sm text-on-surface-variant">Scheduled 4 PM</span>
+</div>
+</button>
+<!-- Doctor Appointment -->
+<button class="bg-surface-container-low hover:bg-surface-container-high transition-colors p-6 rounded-xl flex flex-col items-start gap-4 text-left active:scale-95 duration-200">
+<div class="w-12 h-12 bg-tertiary-container/40 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-3xl filled-icon" data-icon="stethoscope">stethoscope</span>
+</div>
+<div>
+<span class="block font-headline font-bold text-lg text-on-surface leading-tight">Doctor Appointment</span>
+<span class="text-sm text-on-surface-variant">Tomorrow</span>
+</div>
+</button>
+<!-- Meetings -->
+<button class="bg-surface-container-low hover:bg-surface-container-high transition-colors p-6 rounded-xl flex flex-col items-start gap-4 text-left active:scale-95 duration-200">
+<div class="w-12 h-12 bg-surface-container-highest rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl filled-icon" data-icon="groups">groups</span>
+</div>
+<div>
+<span class="block font-headline font-bold text-lg text-on-surface leading-tight">Meetings</span>
+<span class="text-sm text-on-surface-variant">2 planned</span>
+</div>
+</button>
+</section>
+<!-- Signature Card: Wellness Quote -->
+<section class="bg-gradient-to-br from-primary to-primary-dim rounded-xl p-8 text-on-primary shadow-lg overflow-hidden relative">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary-fixed opacity-50 text-4xl mb-2" data-icon="format_quote">format_quote</span>
+<p class="font-headline text-xl font-bold italic leading-relaxed">"The greatest wealth is health."</p>
+<p class="mt-4 text-primary-fixed font-semibold text-sm tracking-widest uppercase">— VIRGIL</p>
+</div>
+<!-- Abstract background shape -->
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+</section>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-28 right-6 w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary shadow-[0_12px_32px_rgba(9,96,172,0.3)] flex items-center justify-center z-50 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="add">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-8 pt-4 bg-white/90 dark:bg-[#2c3434]/90 backdrop-blur-xl z-50 shadow-[0_-12px_32px_rgba(44,52,52,0.06)] rounded-t-[3rem]">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center bg-[#e9efee] dark:bg-[#0960ac]/20 text-[#0960ac] dark:text-[#6aa8f9] rounded-full px-6 py-2 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined filled-icon" data-icon="home">home</span>
+<span class="font-['Manrope'] text-sm font-semibold tracking-wide">Home</span>
+</a>
+<!-- Reminders -->
+<a class="flex flex-col items-center justify-center text-[#abb4b3] dark:text-[#e9efee]/70 px-6 py-2 hover:text-[#0960ac] dark:hover:text-[#6aa8f9] active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="notifications_active">notifications_active</span>
+<span class="font-['Manrope'] text-sm font-semibold tracking-wide">Reminders</span>
+</a>
+<!-- Medication -->
+<a class="flex flex-col items-center justify-center text-[#abb4b3] dark:text-[#e9efee]/70 px-6 py-2 hover:text-[#0960ac] dark:hover:text-[#6aa8f9] active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="medical_services">medical_services</span>
+<span class="font-['Manrope'] text-sm font-semibold tracking-wide">Medication</span>
+</a>
+<!-- Wellness -->
+<a class="flex flex-col items-center justify-center text-[#abb4b3] dark:text-[#e9efee]/70 px-6 py-2 hover:text-[#0960ac] dark:hover:text-[#6aa8f9] active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="spa">spa</span>
+<span class="font-['Manrope'] text-sm font-semibold tracking-wide">Wellness</span>
+</a>
+</nav>
+</body></html>

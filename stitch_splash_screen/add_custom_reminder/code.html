@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add Custom Reminder</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#006858",
+              "on-primary-fixed-variant": "#00315e",
+              "on-secondary-container": "#005d4f",
+              "on-surface": "#2c3434",
+              "inverse-surface": "#0b0f0f",
+              "primary-fixed": "#6aa8f9",
+              "surface-container-high": "#e2eae9",
+              "on-primary": "#f8f8ff",
+              "tertiary-fixed-dim": "#efcd96",
+              "surface-container": "#e9efee",
+              "primary-fixed-dim": "#5c9beb",
+              "tertiary-fixed": "#fedba3",
+              "on-error-container": "#6e0a12",
+              "outline-variant": "#abb4b3",
+              "tertiary-container": "#fedba3",
+              "tertiary": "#745b2f",
+              "primary-container": "#6aa8f9",
+              "primary-dim": "#005499",
+              "tertiary-dim": "#674f24",
+              "secondary-container": "#7cf8dd",
+              "on-tertiary-fixed-variant": "#6f562a",
+              "on-secondary": "#e3fff6",
+              "on-tertiary-container": "#644c21",
+              "on-secondary-fixed": "#00483d",
+              "surface-dim": "#d3dcdb",
+              "primary": "#0960ac",
+              "surface-container-highest": "#dbe4e3",
+              "background": "#f7faf9",
+              "outline": "#737c7c",
+              "surface-bright": "#f7faf9",
+              "surface": "#f7faf9",
+              "error-dim": "#67040d",
+              "surface-tint": "#0960ac",
+              "on-error": "#fff7f6",
+              "error-container": "#fa746f",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#fff8f2",
+              "secondary-fixed-dim": "#6ce9cf",
+              "surface-variant": "#dbe4e3",
+              "on-primary-fixed": "#000613",
+              "secondary-dim": "#005e50",
+              "on-tertiary-fixed": "#503a11",
+              "on-surface-variant": "#586160",
+              "on-primary-container": "#00284e",
+              "secondary-fixed": "#7cf8dd",
+              "surface-container-low": "#f0f5f4",
+              "inverse-on-surface": "#9a9e9d",
+              "error": "#a83836",
+              "secondary": "#006c5c",
+              "inverse-primary": "#6aa8f9",
+              "on-background": "#2c3434"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .soft-glass {
+            background: rgba(247, 250, 249, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f7faf9]/80 backdrop-blur-md shadow-sm flex items-center justify-between px-6 py-4">
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-[#e9efee] active:scale-95 duration-200">
+<span class="material-symbols-outlined text-primary" data-icon="close">close</span>
+</button>
+<h1 class="font-headline font-bold tracking-tight text-xl text-[#2c3434]">Gentle Reminder</h1>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Portrait of a smiling senior woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuIjKtaCoxW2TMcyjZWHWA1f38-Iemu01uX1IRIhVnLlWgz1ouhH9ACiRG7KWZYnwPnsnWdVdh9TxET_zhvWILKDujhrJkXyW6DSSzjAOIeTS0NvXyWmzxBPMl37BUOFEuFkpyl3HtPg3wCcpdwlgTsD2h64-WqSHor474D_Q-9VElvbO3G8l_MxoN91LsaXRSsVh_wywRUKoBFi-vsM4qLiKWWshH1sbh2SOQyFgsq-blOY83PY9L9-kBJTKAtCZtb31aaJH_P5NZ"/>
+</div>
+</header>
+<!-- Main Content -->
+<main class="mt-24 px-6 flex-1 max-w-2xl mx-auto w-full">
+<div class="mb-8">
+<span class="text-primary font-bold tracking-wider text-sm uppercase mb-2 block">Step 1 of 3</span>
+<h2 class="font-headline text-3xl font-extrabold tracking-tight text-on-surface">Create a new ritual</h2>
+<p class="text-on-surface-variant mt-2">Add a gentle nudge to your daily flow.</p>
+</div>
+<!-- Form Sections -->
+<div class="space-y-8">
+<!-- Section: Identity -->
+<section class="bg-surface-container-low p-6 rounded-lg space-y-6">
+<div class="space-y-1">
+<label class="font-label text-sm font-semibold tracking-wide text-on-surface-variant px-1">What should we call this?</label>
+<input class="w-full bg-surface-container-lowest border-none focus:ring-2 focus:ring-primary h-14 rounded-md px-4 text-lg font-medium text-on-surface placeholder:text-outline-variant" placeholder="e.g. Morning Hydration" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label text-sm font-semibold tracking-wide text-on-surface-variant px-1">A brief note (Optional)</label>
+<textarea class="w-full bg-surface-container-lowest border-none focus:ring-2 focus:ring-primary rounded-md p-4 text-on-surface placeholder:text-outline-variant resize-none" placeholder="Add some details..." rows="2"></textarea>
+</div>
+</section>
+<!-- Section: Category Picker -->
+<section>
+<label class="font-label text-sm font-semibold tracking-wide text-on-surface-variant block mb-4 px-1">Select a Category</label>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+<button class="flex flex-col items-center justify-center p-4 bg-secondary-container text-on-secondary-container rounded-lg border-2 border-transparent active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl mb-2" data-icon="medical_services">medical_services</span>
+<span class="font-label text-sm font-bold">Medicine</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 bg-surface-container-lowest text-on-surface-variant rounded-lg hover:bg-surface-container active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl mb-2" data-icon="directions_walk">directions_walk</span>
+<span class="font-label text-sm font-semibold">Walk</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 bg-surface-container-lowest text-on-surface-variant rounded-lg hover:bg-surface-container active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl mb-2" data-icon="stethoscope">stethoscope</span>
+<span class="font-label text-sm font-semibold">Doctor</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 bg-surface-container-lowest text-on-surface-variant rounded-lg hover:bg-surface-container active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl mb-2" data-icon="groups">groups</span>
+<span class="font-label text-sm font-semibold">Meeting</span>
+</button>
+<button class="flex flex-col items-center justify-center p-4 bg-surface-container-lowest text-on-surface-variant rounded-lg hover:bg-surface-container active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl mb-2" data-icon="more_horiz">more_horiz</span>
+<span class="font-label text-sm font-semibold">Other</span>
+</button>
+</div>
+</section>
+<!-- Section: Time & Date -->
+<section class="bg-surface-container-low p-6 rounded-lg">
+<div class="flex flex-col md:flex-row gap-6">
+<div class="flex-1 space-y-1">
+<label class="font-label text-sm font-semibold tracking-wide text-on-surface-variant px-1">Date</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-none focus:ring-2 focus:ring-primary h-14 rounded-md px-4 text-on-surface font-medium" type="date"/>
+</div>
+</div>
+<div class="flex-1 space-y-1">
+<label class="font-label text-sm font-semibold tracking-wide text-on-surface-variant px-1">Time</label>
+<input class="w-full bg-surface-container-lowest border-none focus:ring-2 focus:ring-primary h-14 rounded-md px-4 text-on-surface font-medium text-2xl tracking-widest" type="time"/>
+</div>
+</div>
+</section>
+<!-- Section: Repeat & Sound -->
+<section class="space-y-4">
+<!-- Repeat Toggle -->
+<div class="flex items-center justify-between p-6 bg-surface-container-lowest rounded-lg">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="repeat">repeat</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Repeat daily</h4>
+<p class="text-sm text-on-surface-variant">Occurs every day at this time</p>
+</div>
+</div>
+<div class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-14 h-8 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-1 after:left-1 after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"></div>
+</div>
+</div>
+<!-- Alarm Sound -->
+<button class="w-full flex items-center justify-between p-6 bg-surface-container-lowest rounded-lg text-left active:scale-[0.98] transition-all">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-tertiary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" data-icon="notifications_active">notifications_active</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Notification Sound</h4>
+<p class="text-sm text-on-surface-variant">Soft Chime (Default)</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="chevron_right">chevron_right</span>
+</button>
+</section>
+</div>
+</main>
+<!-- Bottom Action Area -->
+<div class="fixed bottom-0 left-0 w-full p-6 pb-10 bg-gradient-to-t from-surface via-surface to-transparent pointer-events-none">
+<div class="max-w-2xl mx-auto pointer-events-auto">
+<button class="w-full h-16 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-headline font-bold text-lg shadow-xl shadow-primary/20 active:scale-95 transition-all flex items-center justify-center gap-2">
+<span>Save Reminder</span>
+<span class="material-symbols-outlined" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+</div>
+</div>
+<!-- Navigation Shell Placeholder (Suppressed for transactional flow but structure kept in head) -->
+<!-- BottomNavBar is hidden on this focused entry screen to prevent exit without save -->
+</body></html>

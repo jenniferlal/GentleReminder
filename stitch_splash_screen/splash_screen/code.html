@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gentle Reminder - Splash</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#006858",
+              "on-primary-fixed-variant": "#00315e",
+              "on-secondary-container": "#005d4f",
+              "on-surface": "#2c3434",
+              "inverse-surface": "#0b0f0f",
+              "primary-fixed": "#6aa8f9",
+              "surface-container-high": "#e2eae9",
+              "on-primary": "#f8f8ff",
+              "tertiary-fixed-dim": "#efcd96",
+              "surface-container": "#e9efee",
+              "primary-fixed-dim": "#5c9beb",
+              "tertiary-fixed": "#fedba3",
+              "on-error-container": "#6e0a12",
+              "outline-variant": "#abb4b3",
+              "tertiary-container": "#fedba3",
+              "tertiary": "#745b2f",
+              "primary-container": "#6aa8f9",
+              "primary-dim": "#005499",
+              "tertiary-dim": "#674f24",
+              "secondary-container": "#7cf8dd",
+              "on-tertiary-fixed-variant": "#6f562a",
+              "on-secondary": "#e3fff6",
+              "on-tertiary-container": "#644c21",
+              "on-secondary-fixed": "#00483d",
+              "surface-dim": "#d3dcdb",
+              "primary": "#0960ac",
+              "surface-container-highest": "#dbe4e3",
+              "background": "#f7faf9",
+              "outline": "#737c7c",
+              "surface-bright": "#f7faf9",
+              "surface": "#f7faf9",
+              "error-dim": "#67040d",
+              "surface-tint": "#0960ac",
+              "on-error": "#fff7f6",
+              "error-container": "#fa746f",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#fff8f2",
+              "secondary-fixed-dim": "#6ce9cf",
+              "surface-variant": "#dbe4e3",
+              "on-primary-fixed": "#000613",
+              "secondary-dim": "#005e50",
+              "on-tertiary-fixed": "#503a11",
+              "on-surface-variant": "#586160",
+              "on-primary-container": "#00284e",
+              "secondary-fixed": "#7cf8dd",
+              "surface-container-low": "#f0f5f4",
+              "inverse-on-surface": "#9a9e9d",
+              "error": "#a83836",
+              "secondary": "#006c5c",
+              "inverse-primary": "#6aa8f9",
+              "on-background": "#2c3434"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #f7faf9;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .logo-gradient {
+            background: linear-gradient(135deg, #0960ac 0%, #6aa8f9 100%);
+        }
+        .soft-glow {
+            box-shadow: 0 0 60px rgba(124, 248, 221, 0.3);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body text-on-surface">
+<!-- Splash Screen Wrapper -->
+<main class="relative min-h-screen w-full flex flex-col items-center justify-center bg-surface overflow-hidden">
+<!-- Ambient Background Elements (Visual Sanctuary Design) -->
+<div class="absolute top-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-secondary-container/20 blur-[120px]"></div>
+<div class="absolute bottom-[-5%] left-[-5%] w-[50vw] h-[50vw] rounded-full bg-primary-container/10 blur-[100px]"></div>
+<!-- Central Identity Cluster -->
+<div class="relative z-10 flex flex-col items-center gap-12">
+<!-- Logo Container -->
+<div class="relative group">
+<!-- Inner Glow -->
+<div class="absolute inset-0 bg-secondary-fixed rounded-full blur-2xl opacity-30 animate-pulse"></div>
+<!-- Main Pill/Heart Icon Card -->
+<div class="relative w-32 h-32 md:w-40 md:h-40 bg-surface-container-lowest rounded-xl flex items-center justify-center shadow-[0_12px_32px_rgba(44,52,52,0.06)] overflow-hidden">
+<!-- Icon Surface with Gradient -->
+<div class="w-20 h-20 md:w-24 md:h-24 logo-gradient rounded-full flex items-center justify-center soft-glow">
+<span class="material-symbols-outlined text-white text-5xl md:text-6xl" style="font-variation-settings: 'FILL' 1;">
+                            favorite
+                        </span>
+</div>
+</div>
+</div>
+<!-- App Typography -->
+<div class="flex flex-col items-center text-center px-6">
+<h1 class="font-headline font-extrabold text-5xl md:text-6xl text-primary tracking-tight">
+                    Gentle Reminder
+                </h1>
+<!-- Tagline (Asymmetric Editorial Style) -->
+<div class="mt-4 flex items-center gap-3">
+<span class="h-[1px] w-8 bg-outline-variant/30"></span>
+<p class="font-body text-on-surface-variant text-lg md:text-xl tracking-wide font-medium">
+                        Your digital sanctuary
+                    </p>
+<span class="h-[1px] w-8 bg-outline-variant/30"></span>
+</div>
+</div>
+</div>
+<!-- Footer / Accessibility Prompt (Subtle) -->
+<div class="absolute bottom-12 flex flex-col items-center gap-4">
+<div class="flex gap-2">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-primary-container opacity-50"></div>
+<div class="w-2 h-2 rounded-full bg-primary-container opacity-30"></div>
+</div>
+<p class="text-sm font-label text-outline uppercase tracking-[0.2em] font-semibold">
+                Loading Peace of Mind
+            </p>
+</div>
+</main>
+<!-- Content Hidden Logic (Optional context for LLM but following suppression rules) -->
+<!-- Note: TopAppBar and BottomNavBar are suppressed as per "The Destination Rule" 
+         because a Splash Screen is a Linear/Transactional focused journey. -->
+</body></html>

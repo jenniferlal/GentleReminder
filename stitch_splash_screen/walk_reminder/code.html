@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Walk Reminder - Gentle Reminder</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed-variant": "#006858",
+                        "on-primary-fixed-variant": "#00315e",
+                        "on-secondary-container": "#005d4f",
+                        "on-surface": "#2c3434",
+                        "inverse-surface": "#0b0f0f",
+                        "primary-fixed": "#6aa8f9",
+                        "surface-container-high": "#e2eae9",
+                        "on-primary": "#f8f8ff",
+                        "tertiary-fixed-dim": "#efcd96",
+                        "surface-container": "#e9efee",
+                        "primary-fixed-dim": "#5c9beb",
+                        "tertiary-fixed": "#fedba3",
+                        "on-error-container": "#6e0a12",
+                        "outline-variant": "#abb4b3",
+                        "tertiary-container": "#fedba3",
+                        "tertiary": "#745b2f",
+                        "primary-container": "#6aa8f9",
+                        "primary-dim": "#005499",
+                        "tertiary-dim": "#674f24",
+                        "secondary-container": "#7cf8dd",
+                        "on-tertiary-fixed-variant": "#6f562a",
+                        "on-secondary": "#e3fff6",
+                        "on-tertiary-container": "#644c21",
+                        "on-secondary-fixed": "#00483d",
+                        "surface-dim": "#d3dcdb",
+                        "primary": "#0960ac",
+                        "surface-container-highest": "#dbe4e3",
+                        "background": "#f7faf9",
+                        "outline": "#737c7c",
+                        "surface-bright": "#f7faf9",
+                        "surface": "#f7faf9",
+                        "error-dim": "#67040d",
+                        "surface-tint": "#0960ac",
+                        "on-error": "#fff7f6",
+                        "error-container": "#fa746f",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#fff8f2",
+                        "secondary-fixed-dim": "#6ce9cf",
+                        "surface-variant": "#dbe4e3",
+                        "on-primary-fixed": "#000613",
+                        "secondary-dim": "#005e50",
+                        "on-tertiary-fixed": "#503a11",
+                        "on-surface-variant": "#586160",
+                        "on-primary-container": "#00284e",
+                        "secondary-fixed": "#7cf8dd",
+                        "surface-container-low": "#f0f5f4",
+                        "inverse-on-surface": "#9a9e9d",
+                        "error": "#a83836",
+                        "secondary": "#006c5c",
+                        "inverse-primary": "#6aa8f9",
+                        "on-background": "#2c3434"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #f7faf9;
+            color: #2c3434;
+        }
+        .text-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-nav {
+            background: rgba(247, 250, 249, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .breathe-ring {
+            background: conic-gradient(from 0deg, #7cf8dd 0%, #006c5c 75%, transparent 75%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f7faf9]/80 dark:bg-[#2c3434]/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-[#e9efee] transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#0960ac]" data-icon="menu">menu</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-[#2c3434] text-xl">Gentle Reminder</h1>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="Close up portrait of a senior woman smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjrtkSTKP1_z98H_9mgr7WfyG-3u8po3btAtcld1UvCHOp1PCHWgLpARwO3n8yDfdeycaO_VK0NwDzfFr73mQ0gesBaI8BuQBvUGA5h0C9Qquqjr9o0irCNpzl23WbkC6pdE_h4uUoIaX4-PkBjCBFGi-HL8fYuJP-Agr-p5E7CnYkyODUYhJUiJKBnqbd5PcIoV8krmBw8DIXauU9yItPOIh444WAQjMx_Mhk8YgszJ22QBeOCkh242j7E9FioCQVg_I8VXPZzxWR"/>
+</div>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-lg mx-auto space-y-8">
+<!-- Title & Motivation Section -->
+<section class="text-center space-y-2">
+<h2 class="text-headline text-3xl font-extrabold tracking-tight text-on-surface">Daily Wellness Walk</h2>
+<p class="text-secondary font-semibold text-lg">“Great job! Keep going 😊”</p>
+</section>
+<!-- Timer Visual (Breathe Progress Ring inspired) -->
+<section class="relative flex justify-center py-8">
+<div class="relative w-64 h-64 rounded-full flex items-center justify-center shadow-xl bg-surface-container-lowest">
+<!-- Outer Ring Track -->
+<div class="absolute inset-0 rounded-full border-[12px] border-surface-container"></div>
+<!-- Active Ring Segment -->
+<svg class="absolute inset-0 w-full h-full -rotate-90">
+<circle class="text-secondary" cx="128" cy="128" fill="transparent" r="116" stroke="currentColor" stroke-dasharray="728" stroke-dashoffset="218" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<div class="text-center z-10">
+<p class="text-label text-sm uppercase tracking-[0.1em] text-on-surface-variant font-bold mb-1">Time Elapsed</p>
+<span class="text-headline text-5xl font-extrabold tracking-tighter text-primary">21:45</span>
+<p class="text-on-surface-variant font-medium mt-1">Goal: 30 min</p>
+</div>
+</div>
+</section>
+<!-- Stats Bento Grid -->
+<section class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary mb-2 text-3xl" data-icon="directions_walk">directions_walk</span>
+<span class="text-headline text-2xl font-bold text-on-surface">2,480</span>
+<span class="text-label text-xs text-on-surface-variant font-semibold tracking-wider uppercase">Steps taken</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-sm flex flex-col items-center text-center border-l-4 border-secondary-container">
+<span class="material-symbols-outlined text-secondary mb-2 text-3xl" data-icon="flag">flag</span>
+<span class="text-headline text-2xl font-bold text-on-surface">4,500</span>
+<span class="text-label text-xs text-on-surface-variant font-semibold tracking-wider uppercase">Steps goal</span>
+</div>
+</section>
+<!-- Indoor/Outdoor Toggle -->
+<section class="bg-surface-container rounded-xl p-2 flex items-center">
+<button class="flex-1 py-3 px-4 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center gap-2 text-primary font-bold transition-all">
+<span class="material-symbols-outlined" data-icon="forest">forest</span>
+                Outdoor
+            </button>
+<button class="flex-1 py-3 px-4 rounded-lg flex items-center justify-center gap-2 text-on-surface-variant font-semibold hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+                Indoor
+            </button>
+</section>
+<!-- Action Controls -->
+<section class="space-y-4">
+<div class="flex gap-4">
+<button class="flex-[2] py-6 rounded-xl bg-gradient-to-br from-primary to-primary-container text-on-primary text-xl font-bold flex items-center justify-center gap-3 shadow-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                    Resume Walk
+                </button>
+<button class="flex-1 py-6 rounded-xl bg-secondary-container text-on-secondary-container text-xl font-bold flex items-center justify-center gap-2 shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-3xl" data-icon="pause">pause</span>
+</button>
+</div>
+<button class="w-full py-5 rounded-xl bg-surface-container-high text-error font-bold flex items-center justify-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="stop">stop</span>
+                End Session
+            </button>
+</section>
+<!-- Progress Description -->
+<section class="bg-primary/5 rounded-lg p-6 flex items-start gap-4">
+<div class="bg-primary/10 p-3 rounded-full">
+<span class="material-symbols-outlined text-primary" data-icon="info">info</span>
+</div>
+<div class="space-y-1">
+<h4 class="font-bold text-on-surface">Walking Pace</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">You are maintaining a steady pace of 3.2 mph. This is excellent for your heart health!</p>
+</div>
+</section>
+</main>
+<!-- NavigationDrawer (Contextual reference for Wellness) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-8 pt-4 bg-white/90 dark:bg-[#2c3434]/90 backdrop-blur-xl shadow-[0_-12px_32px_rgba(44,52,52,0.06)] z-50 rounded-t-[3rem]">
+<a class="flex flex-col items-center justify-center text-[#abb4b3] px-6 py-2 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Manrope'] text-sm font-semibold tracking-wide">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#abb4b3] px-6 py-2 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="notifications_active">notifications_active</span>
+<span class="font-['Manrope'] text-sm font-semibold tracking-wide">Reminders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#abb4b3] px-6 py-2 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="medical_services">medical_services</span>
+<span class="font-['Manrope'] text-sm font-semibold tracking-wide">Medication</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#e9efee] dark:bg-[#0960ac]/20 text-[#0960ac] rounded-full px-6 py-2 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="spa" style="font-variation-settings: 'FILL' 1;">spa</span>
+<span class="font-['Manrope'] text-sm font-semibold tracking-wide">Wellness</span>
+</a>
+</nav>
+</body></html>

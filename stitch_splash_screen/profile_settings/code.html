@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile &amp; Settings - Gentle Reminder</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#006858",
+              "on-primary-fixed-variant": "#00315e",
+              "on-secondary-container": "#005d4f",
+              "on-surface": "#2c3434",
+              "inverse-surface": "#0b0f0f",
+              "primary-fixed": "#6aa8f9",
+              "surface-container-high": "#e2eae9",
+              "on-primary": "#f8f8ff",
+              "tertiary-fixed-dim": "#efcd96",
+              "surface-container": "#e9efee",
+              "primary-fixed-dim": "#5c9beb",
+              "tertiary-fixed": "#fedba3",
+              "on-error-container": "#6e0a12",
+              "outline-variant": "#abb4b3",
+              "tertiary-container": "#fedba3",
+              "tertiary": "#745b2f",
+              "primary-container": "#6aa8f9",
+              "primary-dim": "#005499",
+              "tertiary-dim": "#674f24",
+              "secondary-container": "#7cf8dd",
+              "on-tertiary-fixed-variant": "#6f562a",
+              "on-secondary": "#e3fff6",
+              "on-tertiary-container": "#644c21",
+              "on-secondary-fixed": "#00483d",
+              "surface-dim": "#d3dcdb",
+              "primary": "#0960ac",
+              "surface-container-highest": "#dbe4e3",
+              "background": "#f7faf9",
+              "outline": "#737c7c",
+              "surface-bright": "#f7faf9",
+              "surface": "#f7faf9",
+              "error-dim": "#67040d",
+              "surface-tint": "#0960ac",
+              "on-error": "#fff7f6",
+              "error-container": "#fa746f",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#fff8f2",
+              "secondary-fixed-dim": "#6ce9cf",
+              "surface-variant": "#dbe4e3",
+              "on-primary-fixed": "#000613",
+              "secondary-dim": "#005e50",
+              "on-tertiary-fixed": "#503a11",
+              "on-surface-variant": "#586160",
+              "on-primary-container": "#00284e",
+              "secondary-fixed": "#7cf8dd",
+              "surface-container-low": "#f0f5f4",
+              "inverse-on-surface": "#9a9e9d",
+              "error": "#a83836",
+              "secondary": "#006c5c",
+              "inverse-primary": "#6aa8f9",
+              "on-background": "#2c3434"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Manrope', sans-serif;
+        background-color: #f7faf9;
+      }
+      .headline-font {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- Top App Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f7faf9]/80 backdrop-blur-md shadow-sm flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="text-[#0960ac] hover:bg-[#e9efee] transition-colors p-2 rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-[#2c3434] text-xl">Gentle Reminder</h1>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high ring-2 ring-primary-container/20">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a senior woman smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy7nlzbJZX8QfTiaqHz_hEdJX0AQiChrg22Ze7_tG2xizgmI9C8ZjfIMriNRJSGSi25MZJppqzC___-lCyTdxgDWGu3FOEW-AFp6AvBC7vvW0IxqZ2uG0Y76_7EYbs4DQOqmQ-at2gAX5PP_D1l8t_u5v_kPBznF_ZeSgS63K7P91B2qUb3S3nbHo0Xv7xf_vNWi70mq6sArKhh5y1ZCGPxbWX4MshzRdIdbBgcSjboQs5hvt8DEGIJ1RO5uNNGGpBylrYExE1ORRq"/>
+</div>
+</div>
+</nav>
+<main class="pt-24 px-6 max-w-2xl mx-auto space-y-10">
+<!-- Profile Section -->
+<section class="space-y-6">
+<header class="flex flex-col gap-1">
+<h2 class="headline-font text-3xl font-extrabold tracking-tight text-on-surface">Your Sanctuary Profile</h2>
+<p class="text-on-surface-variant font-medium">Keep your vital information up to date for better care.</p>
+</header>
+<div class="space-y-4">
+<!-- Name Field -->
+<div class="group">
+<label class="block text-sm font-semibold text-on-surface-variant mb-1.5 ml-1 tracking-wide uppercase font-label">Full Name</label>
+<input class="w-full bg-surface-container-high border-none rounded-sm px-5 py-4 text-lg font-medium text-on-surface focus:ring-2 focus:ring-primary-container transition-all" type="text" value="Elizabeth Harrington"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Age Field -->
+<div class="group">
+<label class="block text-sm font-semibold text-on-surface-variant mb-1.5 ml-1 tracking-wide uppercase font-label">Age</label>
+<input class="w-full bg-surface-container-high border-none rounded-sm px-5 py-4 text-lg font-medium text-on-surface focus:ring-2 focus:ring-primary-container transition-all" type="number" value="72"/>
+</div>
+<!-- Emergency Contact -->
+<div class="group">
+<label class="block text-sm font-semibold text-on-surface-variant mb-1.5 ml-1 tracking-wide uppercase font-label">Emergency Contact</label>
+<input class="w-full bg-surface-container-high border-none rounded-sm px-5 py-4 text-lg font-medium text-on-surface focus:ring-2 focus:ring-primary-container transition-all" type="text" value="+1 (555) 012-3456"/>
+</div>
+</div>
+<!-- Medical Condition Field -->
+<div class="group">
+<label class="block text-sm font-semibold text-on-surface-variant mb-1.5 ml-1 tracking-wide uppercase font-label">Medical Conditions</label>
+<textarea class="w-full bg-surface-container-high border-none rounded-sm px-5 py-4 text-lg font-medium text-on-surface focus:ring-2 focus:ring-primary-container transition-all resize-none" rows="3">Type 2 Diabetes, Mild Hypertension</textarea>
+</div>
+</div>
+</section>
+<!-- Preferences & Accessibility Bento -->
+<section class="space-y-6">
+<h2 class="headline-font text-2xl font-bold tracking-tight text-on-surface">Preferences &amp; Accessibility</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Text Size Control -->
+<div class="p-6 bg-surface-container-lowest rounded-lg shadow-[0_12px_32px_rgba(44,52,52,0.06)] flex flex-col justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="format_size">format_size</span>
+</div>
+<h3 class="font-bold text-lg">Text Size</h3>
+</div>
+<div class="flex items-center justify-between bg-surface-container rounded-full p-1">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high text-primary active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="remove">remove</span>
+</button>
+<span class="font-bold text-xl px-4">Standard</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary-container text-on-primary-container shadow-sm active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- Theme Toggle -->
+<div class="p-6 bg-surface-container-lowest rounded-lg shadow-[0_12px_32px_rgba(44,52,52,0.06)] flex flex-col justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
+</div>
+<h3 class="font-bold text-lg">Theme</h3>
+</div>
+<div class="flex items-center justify-between p-2 bg-surface-container rounded-full">
+<button class="flex-1 py-2 px-4 rounded-full bg-white text-primary font-bold shadow-sm transition-all text-sm">Light</button>
+<button class="flex-1 py-2 px-4 rounded-full text-on-surface-variant font-medium hover:bg-surface-container-high transition-all text-sm">Dark</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Account Security & Info -->
+<section class="space-y-2">
+<h2 class="headline-font text-2xl font-bold tracking-tight text-on-surface mb-4">Security &amp; Information</h2>
+<button class="w-full flex items-center justify-between p-5 bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-outline" data-icon="lock_reset">lock_reset</span>
+<span class="font-semibold text-lg">Update Password</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-5 bg-surface-container-lowest rounded-lg hover:bg-surface-container transition-colors group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-outline" data-icon="info">info</span>
+<span class="font-semibold text-lg">About Gentle Reminder</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-5 bg-surface-container-lowest rounded-lg hover:bg-error-container/10 transition-colors group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-error" data-icon="logout">logout</span>
+<span class="font-semibold text-lg text-error">Logout</span>
+</div>
+</button>
+</section>
+<!-- Action Button -->
+<div class="pt-8">
+<button class="w-full py-5 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold text-xl rounded-xl shadow-lg active:scale-[0.98] transition-all">
+                Save Profile Changes
+            </button>
+</div>
+</main>
+<!-- Navigation Bar -->
+<div class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-8 pt-4 bg-white/90 backdrop-blur-xl rounded-t-[3rem] z-50 shadow-[0_-12px_32px_rgba(44,52,52,0.06)]">
+<a class="flex flex-col items-center justify-center text-[#abb4b3] px-6 py-2 hover:text-[#0960ac] active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Manrope'] text-sm font-semibold tracking-wide">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#abb4b3] px-6 py-2 hover:text-[#0960ac] active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="notifications_active">notifications_active</span>
+<span class="font-['Manrope'] text-sm font-semibold tracking-wide">Reminders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#abb4b3] px-6 py-2 hover:text-[#0960ac] active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="medical_services">medical_services</span>
+<span class="font-['Manrope'] text-sm font-semibold tracking-wide">Medication</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#e9efee] text-[#0960ac] rounded-full px-6 py-2 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="spa">spa</span>
+<span class="font-['Manrope'] text-sm font-semibold tracking-wide">Wellness</span>
+</a>
+</div>
+</body></html>

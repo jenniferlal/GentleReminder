@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Medical Reminder - Gentle Reminder</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#006858",
+              "on-primary-fixed-variant": "#00315e",
+              "on-secondary-container": "#005d4f",
+              "on-surface": "#2c3434",
+              "inverse-surface": "#0b0f0f",
+              "primary-fixed": "#6aa8f9",
+              "surface-container-high": "#e2eae9",
+              "on-primary": "#f8f8ff",
+              "tertiary-fixed-dim": "#efcd96",
+              "surface-container": "#e9efee",
+              "primary-fixed-dim": "#5c9beb",
+              "tertiary-fixed": "#fedba3",
+              "on-error-container": "#6e0a12",
+              "outline-variant": "#abb4b3",
+              "tertiary-container": "#fedba3",
+              "tertiary": "#745b2f",
+              "primary-container": "#6aa8f9",
+              "primary-dim": "#005499",
+              "tertiary-dim": "#674f24",
+              "secondary-container": "#7cf8dd",
+              "on-tertiary-fixed-variant": "#6f562a",
+              "on-secondary": "#e3fff6",
+              "on-tertiary-container": "#644c21",
+              "on-secondary-fixed": "#00483d",
+              "surface-dim": "#d3dcdb",
+              "primary": "#0960ac",
+              "surface-container-highest": "#dbe4e3",
+              "background": "#f7faf9",
+              "outline": "#737c7c",
+              "surface-bright": "#f7faf9",
+              "surface": "#f7faf9",
+              "error-dim": "#67040d",
+              "surface-tint": "#0960ac",
+              "on-error": "#fff7f6",
+              "error-container": "#fa746f",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#fff8f2",
+              "secondary-fixed-dim": "#6ce9cf",
+              "surface-variant": "#dbe4e3",
+              "on-primary-fixed": "#000613",
+              "secondary-dim": "#005e50",
+              "on-tertiary-fixed": "#503a11",
+              "on-surface-variant": "#586160",
+              "on-primary-container": "#00284e",
+              "secondary-fixed": "#7cf8dd",
+              "surface-container-low": "#f0f5f4",
+              "inverse-on-surface": "#9a9e9d",
+              "error": "#a83836",
+              "secondary": "#006c5c",
+              "inverse-primary": "#6aa8f9",
+              "on-background": "#2c3434"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .breathe-ring {
+        background: conic-gradient(from 180deg at 50% 50%, #7cf8dd 0%, #0960ac 100%);
+      }
+      .glass-nav {
+        background: rgba(247, 250, 249, 0.8);
+        backdrop-filter: blur(20px);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f7faf9]/80 dark:bg-[#2c3434]/80 backdrop-blur-md shadow-sm dark:shadow-none flex items-center justify-between px-6 py-4">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#0960ac] dark:text-[#6aa8f9] hover:bg-[#e9efee] transition-colors p-2 rounded-full">menu</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-[#2c3434] dark:text-[#f7faf9] text-xl">Gentle Reminder</h1>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="Senior woman with a friendly smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG5wrKie2MFrCXDkfbZdp6mKWTKYMLa6ktE54eMU_QB4Ozby13sZ3mI_e_VhnP2SsbkCBT3_0hOFGj4YTxI2XXq3y4dlBkLKfzfqzIKW-3FnML3nHoKoakRAMuZG6ycenLayUH8j8AQY5xyF7B9qfhTqdn-MVTsg8XmyejNKupUNoAHBDNHGvamndJFKVfIyv9ethIMOzhy72ZoetCvPa19KVBVJROLkVUsNVTOg8Oj0UmcLUqPYJC7whIk8nFzsXFkrJlavBaqvwO"/>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto space-y-8">
+<!-- Welcome Section -->
+<section class="mt-4">
+<h2 class="font-headline font-extrabold text-4xl tracking-tight text-on-surface mb-2">Time for your Medication</h2>
+<p class="text-on-surface-variant text-lg">Your well-being is our priority today.</p>
+</section>
+<!-- Progress Tracker (Morning / Afternoon / Night) -->
+<section class="flex justify-between items-center bg-surface-container-low p-6 rounded-lg">
+<div class="flex flex-col items-center gap-2">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">light_mode</span>
+</div>
+<span class="font-label text-xs font-bold tracking-widest text-on-secondary-container">MORNING</span>
+</div>
+<div class="h-[2px] flex-1 bg-surface-container-high mx-4 relative">
+<div class="absolute inset-0 bg-primary w-1/3"></div>
+</div>
+<div class="flex flex-col items-center gap-2 opacity-40">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">wb_sunny</span>
+</div>
+<span class="font-label text-xs font-semibold tracking-widest">AFTERNOON</span>
+</div>
+<div class="h-[2px] flex-1 bg-surface-container-high mx-4"></div>
+<div class="flex flex-col items-center gap-2 opacity-40">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">dark_mode</span>
+</div>
+<span class="font-label text-xs font-semibold tracking-widest">NIGHT</span>
+</div>
+</section>
+<!-- Medicine Details Bento Card -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_12px_32px_rgba(44,52,52,0.06)] relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/10 rounded-bl-full -mr-8 -mt-8"></div>
+<div class="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+<div>
+<span class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-bold mb-4 tracking-wide">NEXT DOSE</span>
+<h3 class="text-3xl font-headline font-bold text-on-surface mb-1">BP Tablet</h3>
+<p class="text-on-surface-variant font-medium text-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">medication</span> 
+                        1 Pill • Daily Dosage
+                    </p>
+</div>
+<div class="mt-6 md:mt-0 text-right">
+<div class="text-5xl font-headline font-black text-primary tracking-tighter">08:00</div>
+<div class="text-on-surface-variant font-bold tracking-widest">AM</div>
+</div>
+</div>
+<!-- Large Before/After Food Toggle -->
+<div class="bg-surface-container rounded-lg p-2 flex gap-2 mb-8">
+<button class="flex-1 py-4 px-6 rounded-lg font-bold flex items-center justify-center gap-3 transition-all duration-200 bg-surface-container-lowest text-on-surface shadow-sm">
+<span class="material-symbols-outlined">restaurant</span>
+                    Before Food
+                </button>
+<button class="flex-1 py-4 px-6 rounded-lg font-bold flex items-center justify-center gap-3 transition-all duration-200 text-on-surface-variant opacity-60 hover:opacity-100">
+<span class="material-symbols-outlined">flatware</span>
+                    After Food
+                </button>
+</div>
+<!-- Action Buttons -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<button class="md:col-span-2 py-6 rounded-xl font-headline font-extrabold text-xl bg-gradient-to-br from-primary to-primary-container text-on-primary shadow-lg active:scale-95 transition-transform flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                    Mark Taken
+                </button>
+<button class="py-6 rounded-xl font-headline font-bold text-lg bg-secondary-container text-on-secondary-container active:scale-95 transition-transform flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">snooze</span>
+                    Snooze
+                </button>
+<button class="md:col-span-3 py-4 rounded-xl font-headline font-bold text-lg border border-outline-variant/20 text-error flex items-center justify-center gap-2 hover:bg-error/5 transition-colors">
+<span class="material-symbols-outlined">close</span>
+                    Missed Dose
+                </button>
+</div>
+</div>
+<!-- Toggles & Accessibility -->
+<section class="space-y-4">
+<div class="flex items-center justify-between p-6 bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container-highest rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">record_voice_over</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Voice Reminder</h4>
+<p class="text-on-surface-variant text-sm">Read instructions aloud</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-14 h-8 bg-outline-variant/30 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:start-[4px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-6 bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container-highest rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">family_restroom</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Caregiver Alert</h4>
+<p class="text-on-surface-variant text-sm">Notify Sarah if missed</p>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-14 h-8 bg-outline-variant/30 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[4px] after:start-[4px] after:bg-white after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</section>
+<!-- Adherence Breathe Ring -->
+<section class="flex flex-col items-center py-10">
+<div class="relative w-48 h-48 flex items-center justify-center">
+<div class="absolute inset-0 rounded-full border-[12px] border-surface-container-high"></div>
+<div class="absolute inset-0 rounded-full border-[12px] border-primary border-t-transparent border-l-transparent rotate-45"></div>
+<div class="text-center">
+<div class="text-4xl font-headline font-black text-on-surface">85%</div>
+<div class="text-xs font-bold tracking-widest text-on-surface-variant uppercase">Weekly Adherence</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-8 pt-4 bg-white/90 dark:bg-[#2c3434]/90 backdrop-blur-xl shadow-[0_-12px_32px_rgba(44,52,52,0.06)] z-50">
+<a class="flex flex-col items-center justify-center text-[#abb4b3] dark:text-[#e9efee]/70 px-6 py-2 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Manrope'] text-sm font-semibold tracking-wide">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#abb4b3] dark:text-[#e9efee]/70 px-6 py-2 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined">notifications_active</span>
+<span class="font-['Manrope'] text-sm font-semibold tracking-wide">Reminders</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#e9efee] dark:bg-[#0960ac]/20 text-[#0960ac] dark:text-[#6aa8f9] rounded-full px-6 py-2 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+<span class="font-['Manrope'] text-sm font-semibold tracking-wide">Medication</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#abb4b3] dark:text-[#e9efee]/70 px-6 py-2 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined">spa</span>
+<span class="font-['Manrope'] text-sm font-semibold tracking-wide">Wellness</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#006858",
+              "on-primary-fixed-variant": "#00315e",
+              "on-secondary-container": "#005d4f",
+              "on-surface": "#2c3434",
+              "inverse-surface": "#0b0f0f",
+              "primary-fixed": "#6aa8f9",
+              "surface-container-high": "#e2eae9",
+              "on-primary": "#f8f8ff",
+              "tertiary-fixed-dim": "#efcd96",
+              "surface-container": "#e9efee",
+              "primary-fixed-dim": "#5c9beb",
+              "tertiary-fixed": "#fedba3",
+              "on-error-container": "#6e0a12",
+              "outline-variant": "#abb4b3",
+              "tertiary-container": "#fedba3",
+              "tertiary": "#745b2f",
+              "primary-container": "#6aa8f9",
+              "primary-dim": "#005499",
+              "tertiary-dim": "#674f24",
+              "secondary-container": "#7cf8dd",
+              "on-tertiary-fixed-variant": "#6f562a",
+              "on-secondary": "#e3fff6",
+              "on-tertiary-container": "#644c21",
+              "on-secondary-fixed": "#00483d",
+              "surface-dim": "#d3dcdb",
+              "primary": "#0960ac",
+              "surface-container-highest": "#dbe4e3",
+              "background": "#f7faf9",
+              "outline": "#737c7c",
+              "surface-bright": "#f7faf9",
+              "surface": "#f7faf9",
+              "error-dim": "#67040d",
+              "surface-tint": "#0960ac",
+              "on-error": "#fff7f6",
+              "error-container": "#fa746f",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#fff8f2",
+              "secondary-fixed-dim": "#6ce9cf",
+              "surface-variant": "#dbe4e3",
+              "on-primary-fixed": "#000613",
+              "secondary-dim": "#005e50",
+              "on-tertiary-fixed": "#503a11",
+              "on-surface-variant": "#586160",
+              "on-primary-container": "#00284e",
+              "secondary-fixed": "#7cf8dd",
+              "surface-container-low": "#f0f5f4",
+              "inverse-on-surface": "#9a9e9d",
+              "error": "#a83836",
+              "secondary": "#006c5c",
+              "inverse-primary": "#6aa8f9",
+              "on-background": "#2c3434"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .tonal-shift-bg {
+        background: linear-gradient(180deg, rgba(247, 250, 249, 1) 0%, rgba(233, 239, 238, 0.5) 100%);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f7faf9]/80 backdrop-blur-md shadow-sm">
+<div class="flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-[#e9efee] transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#0960ac]" data-icon="menu">menu</span>
+</button>
+<h1 class="font-headline font-bold tracking-tight text-[#2c3434] text-xl">Gentle Reminder</h1>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high border-2 border-primary-container overflow-hidden">
+<img alt="Senior User Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a senior man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKkfj1grc5KmtiKs-BKBjrc-UGTsn_9JlULYbJZYMX9Rco_1vORnmlA7_qnV8OuxiJpVXQM-8KiFKKci7SQrZQYGxexHqhItC64Y1IIShGYsmoYflSY3kXo5T1geB5idM_Rb0wi6GTOsnuHfb8rKBs1Jj9hsT-IfjIHiA8JNoRTqcuij9y_h6Y4emuJyISHIrvZA4unJXJ6hebf70IDvNizD3uMcG57z3Db5hqHsJC6DYaEuhOgPCjuJQ-li7nJQK5PE_zbDhBXINu"/>
+</div>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Back Navigation (Semantic Shell) -->
+<div class="mb-8">
+<button class="flex items-center gap-2 text-primary font-semibold py-2 px-4 -ml-4 rounded-full hover:bg-surface-container transition-colors group">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+<span class="font-label">Back</span>
+</button>
+</div>
+<!-- Meeting Details Section (Asymmetric Layout) -->
+<section class="space-y-8">
+<header>
+<h2 class="font-headline text-display-lg text-4xl font-extrabold tracking-tight text-on-surface mb-2">Upcoming Meeting</h2>
+<p class="text-on-surface-variant text-lg">Your focus for today</p>
+</header>
+<!-- Main Meeting Card (Tonal Layering & Glassmorphism) -->
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-br from-primary to-secondary opacity-10 blur-2xl rounded-xl"></div>
+<div class="relative bg-surface-container-lowest rounded-xl p-8 shadow-[0_12px_32px_rgba(44,52,52,0.06)] flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-2 h-12 bg-primary rounded-full"></div>
+<div>
+<h3 class="font-headline text-3xl font-bold text-on-surface">Amit</h3>
+<div class="flex items-center gap-2 text-primary font-bold text-xl mt-1">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+<span>10:00 AM</span>
+</div>
+</div>
+</div>
+<div class="flex gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Health Consultation</span>
+</div>
+</div>
+<div class="w-24 h-24 rounded-full overflow-hidden shadow-lg border-4 border-surface-container">
+<img alt="Amit" class="w-full h-full object-cover" data-alt="Portrait of a male professional" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjhqKVKHCxrpD-G-XZTJpu_RgrwPTVxDsNLUZM64wMY4MXpQz9horLIh8SICsvYw3XitY810X0QajScZJXk2xIdJHnOpCkOWrkmTXPNxUESWfNNfaqOzMjqWHPlhPC_i80S-vlaXOelRBLXdk_XE2YZUOAnOjS1cPGHkTMJK72qO_7CpUn1Jwx2mhtDdqt-7IrI8xg2RFmPAuwcwaD1I77mXyXtvCC6QvHXsYTnDH64z6EBRGSeLSN-awlBQTKb1J4mOQtFBtHUXoJ"/>
+</div>
+</div>
+</div>
+<!-- Action Controls (High Contrast / Accessible) -->
+<div class="grid grid-cols-2 gap-4 pt-4">
+<button class="flex flex-col items-center justify-center gap-3 p-8 bg-surface-container-high rounded-xl hover:bg-surface-container-highest transition-all active:scale-95 group">
+<div class="w-16 h-16 rounded-full bg-white flex items-center justify-center text-primary shadow-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="edit">edit</span>
+</div>
+<span class="font-headline font-bold text-on-surface">Edit Details</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-3 p-8 bg-error-container/10 rounded-xl hover:bg-error-container/20 transition-all active:scale-95 group">
+<div class="w-16 h-16 rounded-full bg-white flex items-center justify-center text-error shadow-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" data-icon="delete">delete</span>
+</div>
+<span class="font-headline font-bold text-error">Delete Meeting</span>
+</button>
+</div>
+<!-- Accessibility Note (Subtle Footer) -->
+<div class="p-6 bg-surface-container-low rounded-xl border-l-4 border-secondary/30">
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-secondary" data-icon="info">info</span>
+<p class="text-sm text-on-surface-variant font-medium leading-relaxed">
+                        This meeting will automatically notify you 15 minutes before 10:00 AM. Ensure your volume is audible for the audio alert.
+                    </p>
+</div>
+</div>
+</section>
+</main>
+<!-- Navigation suppressed per "Transactional/Task-Focused" rule in JSON logic for a focused "Meeting" detail screen -->
+<!-- Floating Action Button - Contextually hidden for Details Screen -->
+<!-- BottomNavBar (Execution of JSON Spec) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-8 pt-4 bg-white/90 backdrop-blur-xl z-50 shadow-[0_-12px_32px_rgba(44,52,52,0.06)]">
+<a class="flex flex-col items-center justify-center text-[#abb4b3] px-6 py-2 hover:text-[#0960ac] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Manrope'] text-sm font-semibold tracking-wide">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#e9efee] text-[#0960ac] rounded-full px-6 py-2 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="notifications_active">notifications_active</span>
+<span class="font-['Manrope'] text-sm font-semibold tracking-wide">Reminders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#abb4b3] px-6 py-2 hover:text-[#0960ac] transition-colors active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="medical_services">medical_services</span>
+<span class="font-['Manrope'] text-sm font-semibold tracking-wide">Medication</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#abb4b3] px-6 py-2 hover:text-[#0960ac] transition-colors active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="spa">spa</span>
+<span class="font-['Manrope'] text-sm font-semibold tracking-wide">Wellness</span>
+</a>
+</nav>
+</body></html>
